@@ -1,0 +1,34 @@
+# Binaries
+/ftransfer
+/ftransfer.exe
+/dist/
+/bin/
+
+# Go build artifacts
+*.exe
+*.test
+*.out
+*.prof
+*.coverprofile
+
+# Go workspace
+go.work
+go.work.sum
+
+# IDE / editor
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Local certs / runtime state (in case someone copies them into the repo)
+cert.pem
+key.pem
+
+# Local test artifacts
+/testdata/tmp/
