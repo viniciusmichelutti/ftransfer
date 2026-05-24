@@ -2,21 +2,6 @@
 
 Cross-platform LAN file transfer CLI for Mac and Windows. No SMB, no accounts, no servers — auto-discovers peers on your local network via mDNS and streams files over TLS with a live progress bar.
 
-## Install
-
-Pre-built binaries are produced by CI on every push to `master` ([Actions tab](../../actions)). Download the artifact for your OS/arch and put it on your `PATH`.
-
-Or build from source:
-
-```bash
-# Native
-go build -o ftransfer ./cmd/ftransfer
-
-# Cross-compile
-GOOS=darwin  GOARCH=arm64 go build -o ftransfer      ./cmd/ftransfer
-GOOS=windows GOARCH=amd64 go build -o ftransfer.exe  ./cmd/ftransfer
-```
-
 ## Usage
 
 On the **receiving** machine:
@@ -68,3 +53,19 @@ ftransfer --help
 ## How it works
 
 mDNS advertises `_ftransfer._tcp` on the LAN. The sender dials the receiver over TLS 1.3 (self-signed certs auto-generated on first run, stored in your OS user config dir), exchanges a JSON manifest, waits for the receiver's accept prompt, then streams a tar archive of the requested files/folders.
+
+## Install
+
+Pre-built binaries are produced by CI on every push to `master` ([Actions tab](../../actions)). Download the artifact for your OS/arch and put it on your `PATH`.
+
+Or build from source:
+
+```bash
+# Native
+go build -o ftransfer ./cmd/ftransfer
+
+# Cross-compile
+GOOS=darwin  GOARCH=arm64 go build -o ftransfer      ./cmd/ftransfer
+GOOS=windows GOARCH=amd64 go build -o ftransfer.exe  ./cmd/ftransfer
+```
+
