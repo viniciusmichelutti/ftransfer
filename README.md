@@ -1,6 +1,6 @@
 # ftransfer
 
-Cross-platform LAN file transfer CLI for Mac and Windows. No SMB, no accounts, no servers — auto-discovers peers on your local network via mDNS and streams files over TLS with a live progress bar.
+Cross-platform CLI for sending files between computers (Mac, Linux, and Windows). Simple. Fast. For computers on the same network. No headaches with permissions, SMB, users, etc.
 
 ## Usage
 
