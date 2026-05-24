@@ -56,7 +56,7 @@ mDNS advertises `_ftransfer._tcp` on the LAN. The sender dials the receiver over
 
 ## Install
 
-Pre-built binaries are produced by CI on every push to `master` ([Actions tab](../../actions)). Download the artifact for your OS/arch and put it on your `PATH`.
+Download the binary for your OS/arch from the [latest release](../../releases/latest) and call it on terminal.
 
 Or build from source:
 
